@@ -4,5 +4,5 @@
         android:id="@+id/navigation_MarketSentiment"
         android:icon="@drawable/baseline_analytics_24"
         android:title="@string/menuMarketSentiment"
-        android:visible="false" />
+        android:visible="true" />
 </menu>
