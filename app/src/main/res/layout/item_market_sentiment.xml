@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/textTicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ticker"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textSentiment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sentiment: Bullish" />
+
+    <TextView
+        android:id="@+id/textComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of comments: 0" />
+
+    <TextView
+        android:id="@+id/textSentimentScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sentiment score: 0.0" />
+</LinearLayout>

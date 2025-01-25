@@ -45,4 +45,7 @@ dependencies {
 
     // browser
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+    // swipe to refresh; folosim asta in loc de butonul de refresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 }
