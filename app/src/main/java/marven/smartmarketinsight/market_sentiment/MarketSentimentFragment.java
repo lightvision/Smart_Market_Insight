@@ -51,7 +51,7 @@ public class MarketSentimentFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        tvMarketSentiment = view.findViewById(R.id.tv_market_sentiment);
+        tvMarketSentiment = view.findViewById(R.id.textMarketSentiment);
 
         // Fetch JSON data (hard-coded for testing)
         fetchMarketSentiment();
