@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Smart Market Insight</string>
+    <string name="menuMarketSentiment">Sentiment de piata</string>
+    <string name="redditNoApiData">Incarcare date https://tradestie.com/api/v1/apps/reddi</string>
+</resources>
