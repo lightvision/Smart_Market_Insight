@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bottom_nav_menu"
+    android:id="@+id/mobile_navigation"
     app:startDestination="@id/marketSentimentFragment">
 
     <fragment
@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_market_sentiment" />
     <fragment
         android:id="@+id/financialNews"
-        android:name="marven.smartmarketinsight.financial_news.FinancialNews"
+        android:name="marven.smartmarketinsight.financial_news.FinancialNewsFragment"
         android:label="fragment_financial_news"
         tools:layout="@layout/fragment_financial_news" />
 </navigation>

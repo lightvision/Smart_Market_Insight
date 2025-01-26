@@ -14,12 +14,12 @@ import android.view.ViewGroup;
 
 import marven.smartmarketinsight.R;
 
-public class FinancialNews extends Fragment {
+public class FinancialNewsFragment extends Fragment {
 
     private FinancialNewsViewModel mViewModel;
 
-    public static FinancialNews newInstance() {
-        return new FinancialNews();
+    public static FinancialNewsFragment newInstance() {
+        return new FinancialNewsFragment();
     }
 
     @Override

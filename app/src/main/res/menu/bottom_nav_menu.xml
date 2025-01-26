@@ -4,5 +4,7 @@
         android:id="@+id/navigation_MarketSentiment"
         android:icon="@drawable/baseline_analytics_24"
         android:title="@string/menuMarketSentiment" />
-    <item android:title="Stiri Financiare" />
+    <item
+        android:id="@+id/navigation_FinancialNews"
+        android:title="Stiri Financiare" />
 </menu>

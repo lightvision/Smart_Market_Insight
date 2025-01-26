@@ -32,7 +32,7 @@ public class MarketSentimentViewModel extends ViewModel {
         String url = "https://tradestie.com/api/v1/apps/reddit";
         url="https://tradestie.com/api/v1/apps/reddit?date=2022-04-03";
 
-        Log.i("CocktailViewModel", "Fetching marketing sentiment from Reddit.");
+        Log.i("MarketSentimentViewModel", "Fetching marketing sentiment from Reddit.");
 
         Request request = new Request.Builder()
                 .url(url)
