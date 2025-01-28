@@ -1,4 +1,4 @@
-package marven.smartmarketinsight.dashboard;
+package marven.smartmarketinsight.trends;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import marven.smartmarketinsight.R;
 
-public class DashboardFragment extends Fragment {
+public class TrendsFragment extends Fragment {
 
-    private DashboardViewModel mViewModel;
+    private TrendsViewModel mViewModel;
 
-    public static DashboardFragment newInstance() {
-        return new DashboardFragment();
+    public static TrendsFragment newInstance() {
+        return new TrendsFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        return inflater.inflate(R.layout.fragment_trends, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(DashboardViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(TrendsViewModel.class);
         // TODO: Use the ViewModel
     }
 

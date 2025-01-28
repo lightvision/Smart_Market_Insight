@@ -1,4 +1,4 @@
-package marven.smartmarketinsight.home;
+package marven.smartmarketinsight.forex;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import marven.smartmarketinsight.R;
 
-public class HomeFragment extends Fragment {
+public class ForexFragment extends Fragment {
 
-    private HomeViewModel mViewModel;
+    private ForexViewModel mViewModel;
 
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
+    public static ForexFragment newInstance() {
+        return new ForexFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.forex_dashboard, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(ForexViewModel.class);
         // TODO: Use the ViewModel
     }
 
