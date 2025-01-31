@@ -20,5 +20,16 @@
         android:id="@+id/newsFragment"
         android:name="marven.smartmarketinsight.news.NewsFragment"
         android:label="News"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news">
+
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="marven.smartmarketinsight.news.NewsDetailsFragment"
+        android:label="News Details"
+        tools:layout="@layout/news_details" />
 </navigation>
