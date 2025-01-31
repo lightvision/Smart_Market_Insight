@@ -36,6 +36,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         holder.title.setText(news.getTitle());
         holder.description.setText(news.getDescription());
         holder.source.setText(news.getSource());
+        holder.time.setText(news.getPubDate());
 
         if (news.getUrl() != null && !news.getUrl().isEmpty()) {
             holder.itemView.setOnClickListener(v -> {
@@ -43,6 +44,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
                 bundle.putString("title", news.getTitle());
                 bundle.putString("description", news.getDescription());
                 bundle.putString("source", news.getSource());
+                bundle.putString("time", news.getPubDate());
 
                 Navigation.findNavController(v).navigate(R.id.action_newsFragment_to_newsDetailsFragment, bundle);
             });
