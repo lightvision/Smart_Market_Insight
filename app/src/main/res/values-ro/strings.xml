@@ -4,7 +4,7 @@
     <string name="app_name">Smart Market Insight</string>
     <string name="title_home">HomeRO</string>
     <string name="title_dashboard">DashboardRO</string>
-    <string name="title_notifications">NotificationsRO</string>
+    <string name="title_notifications">Știri</string>
 
     <!--    Termeni si Conditii-->
     <string name="terms_and_conditions">

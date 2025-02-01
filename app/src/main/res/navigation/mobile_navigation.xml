@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="marven.smart_market_insight.ui.notifications.NotificationsFragment"
+        android:name="marven.smart_market_insight.ui.news.NewsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_news" />
 </navigation>
