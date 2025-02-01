@@ -1,6 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    Aplicatie-->
     <string name="app_name">Smart Market Insight</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--    Termeni si Conditii-->
+    <string name="terms_and_conditions">
+        <b><u>IMPORTANT:</u></b>\n\n
+        Please read the following <b>TERMS AND CONDITIONS</b> carefully before using the application.\n
+        \n
+        1. This application is <b>STRICTLY</b> for educational purposes and must not be used for any real-world financial decision-making.\n\n
+        2. We are NOT financial advisors, nor do we provide any financial, investment, or professional consultancy services.\n\n
+        3. The data provided in this application is solely for demonstration and informational purposes. It may be incomplete, outdated, or inaccurate.\n\n
+        4. UNDER NO CIRCUMSTANCES should you use this application to make financial investments, trades, or other monetary decisions. Doing so is entirely at your own risk.\n\n
+        5. By continuing, you acknowledge that:\n\n
+           - The creators and developers of this application are not liable for any financial losses or damages incurred.\n
+           - You have read and fully understood these terms and agree to abide by them.\n
+        \n\n
+        If you do not agree to these terms, you MUST exit the application immediately.
+        \n\n\n
+    </string>
+    <string name="accept_terms_checkbox">Accept Terms and Conditions</string>
+    <string name="terms_exit_button">Exit</string>
+    <string name="terms_ok_button">OK</string>
 </resources>
