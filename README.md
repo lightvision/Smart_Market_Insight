@@ -1,1 +1,0 @@
-# Smart Market Insight - Redesign
