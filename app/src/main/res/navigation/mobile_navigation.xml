@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="marven.smart_market_insight.ui.home.HomeFragment"
+        android:name="marven.smart_market_insight.ui.market_sentiment.MarketSentimentFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_market_sentiment" />
 
     <fragment
         android:id="@+id/navigation_dashboard"

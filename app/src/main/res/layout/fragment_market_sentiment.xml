@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Titlul fix -->
+        <TextView
+            android:id="@+id/titleMarketSentiment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reddit Market Sentiment"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#444444"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-medium" />
+
+
+
+
+
+        <!-- RecyclerView pentru date -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMarketSentiment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

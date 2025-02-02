@@ -24,10 +24,13 @@ public class NewsFragment extends Fragment {
         binding = FragmentNewsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        newsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textNotifications;
+//        newsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
+
+
+
 
     @Override
     public void onDestroyView() {
