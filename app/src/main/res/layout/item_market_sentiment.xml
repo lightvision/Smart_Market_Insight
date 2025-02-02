@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp"
-    android:background="@android:color/white"
+    android:background="?attr/colorSurface"
     android:layout_marginBottom="8dp"
     android:elevation="2dp">
 
@@ -14,23 +14,27 @@
         android:layout_height="wrap_content"
         android:text="Ticker"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface" />
 
     <TextView
         android:id="@+id/textSentiment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sentiment: Bullish" />
+        android:text="Sentiment: Bullish"
+        android:textColor="?attr/colorOnSurface" />
 
     <TextView
         android:id="@+id/textComments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number of comments: 0" />
+        android:text="Number of comments: 0"
+        android:textColor="?attr/colorOnSurface" />
 
     <TextView
         android:id="@+id/textSentimentScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sentiment score: 0.0" />
+        android:text="Sentiment score: 0.0"
+        android:textColor="?attr/colorOnSurface" />
 </LinearLayout>

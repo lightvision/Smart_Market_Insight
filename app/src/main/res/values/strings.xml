@@ -2,7 +2,7 @@
 <resources>
     <!--    Aplicatie-->
     <string name="app_name">Smart Market Insight</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Trends</string>
     <string name="title_dashboard">Dashboard</string>
 
     <!--    Termeni si Conditii-->

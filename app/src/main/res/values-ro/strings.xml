@@ -2,7 +2,7 @@
 <resources>
     <!--    Aplicatie-->
     <string name="app_name">Smart Market Insight</string>
-    <string name="title_home">HomeRO</string>
+    <string name="title_home">Tendințe</string>
     <string name="title_dashboard">DashboardRO</string>
     <string name="title_notifications">Știri</string>
 

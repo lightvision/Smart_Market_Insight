@@ -1,23 +1,37 @@
 package marven.smart_market_insight.ui.market_sentiment;
+
+import android.app.Application;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-import org.json.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import marven.smart_market_insight.ui.market_sentiment.MarketSentiment;
-import okhttp3.*;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
-public class MarketSentimentViewModel extends ViewModel {
+public class MarketSentimentViewModel extends AndroidViewModel {
 
     private final MutableLiveData<List<MarketSentiment>> marketSentimentsLiveData = new MutableLiveData<>();
     private final MutableLiveData<String> errorStateLiveData = new MutableLiveData<>();
+
+    public MarketSentimentViewModel(@NonNull Application application) {
+        super(application);
+    }
 
     public LiveData<List<MarketSentiment>> getMarketSentiments() {
         return marketSentimentsLiveData;
@@ -28,11 +42,16 @@ public class MarketSentimentViewModel extends ViewModel {
     }
 
     public void fetchMarketSentiment() {
+        if (!isNetworkAvailable()) {
+            errorStateLiveData.postValue("No network connection available.");
+            marketSentimentsLiveData.postValue(new ArrayList<>());
+            return;
+        }
+
         OkHttpClient client = new OkHttpClient();
         String url = "https://tradestie.com/api/v1/apps/reddit";
-//        url="https://tradestie.com/api/v1/apps/reddit?date=2022-04-03";
 
-        Log.i("MarketSentimentViewModel", "Fetching marketing sentiment from Reddit.");
+        Log.i("MarketSentimentVM", "Fetching marketing sentiment from Reddit.");
 
         Request request = new Request.Builder()
                 .url(url)
@@ -41,9 +60,8 @@ public class MarketSentimentViewModel extends ViewModel {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                // Dacă apare o eroare, setăm o listă goală sau afișăm un mesaj prin alte mijloace
-                errorStateLiveData.postValue(e.getMessage()); // Postează mesajul de eroare
-                marketSentimentsLiveData.postValue(new ArrayList<>()); // Postează o listă goală
+                errorStateLiveData.postValue(e.getMessage());
+                marketSentimentsLiveData.postValue(new ArrayList<>());
             }
 
             @Override
@@ -64,8 +82,8 @@ public class MarketSentimentViewModel extends ViewModel {
                             ));
                         }
 
-                        marketSentimentsLiveData.postValue(sentiments); // Postează lista de date
-                        errorStateLiveData.postValue(null); // Șterge eroarea dacă cererea a avut succes
+                        marketSentimentsLiveData.postValue(sentiments);
+                        errorStateLiveData.postValue(null);
                     } catch (Exception e) {
                         errorStateLiveData.postValue("Error parsing data: " + e.getMessage());
                         marketSentimentsLiveData.postValue(new ArrayList<>());
@@ -76,6 +94,11 @@ public class MarketSentimentViewModel extends ViewModel {
                 }
             }
         });
+    }
 
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getApplication().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
