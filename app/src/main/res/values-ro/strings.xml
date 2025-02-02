@@ -25,4 +25,10 @@
     <string name="accept_terms_checkbox">Accept Termenii și condițiile</string>
     <string name="terms_exit_button">Ieșire</string>
     <string name="terms_ok_button">OK</string>
+
+    <string name="ticker">Simbol</string>
+    <string name="sentiment">Sentiment: %1$s</string>
+    <string name="number_of_comments">Număr de comentarii: %1$d</string>
+    <string name="sentiment_score">Scorul sentimentului: %1$s</string>
+    <string name="reddit_market_sentiment">Sentimentul pieței Reddit</string>
 </resources>

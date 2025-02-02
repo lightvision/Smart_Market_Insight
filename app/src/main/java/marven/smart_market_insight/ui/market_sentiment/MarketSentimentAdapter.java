@@ -64,15 +64,15 @@ public class MarketSentimentAdapter extends RecyclerView.Adapter<MarketSentiment
         holder.textTicker.setText(sentiment.getTicker());
 
         // Create a SpannableString for the sentiment text
-        String sentimentText = "Sentiment: " + sentiment.getSentiment();
+        String sentimentText = holder.itemView.getContext().getString(R.string.sentiment, sentiment.getSentiment());
         SpannableString spannableString = new SpannableString(sentimentText);
         int start = sentimentText.indexOf(sentiment.getSentiment());
         int end = start + sentiment.getSentiment().length();
         spannableString.setSpan(new StyleSpan(Typeface.BOLD), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         holder.textSentiment.setText(spannableString);
-        holder.textComments.setText("Number of comments: " + sentiment.getNumberOfComments());
-        holder.textSentimentScore.setText("Sentiment score: " + sentiment.getSentimentScore());
+        holder.textComments.setText(holder.itemView.getContext().getString(R.string.number_of_comments, (int) sentiment.getNumberOfComments()));
+        holder.textSentimentScore.setText(holder.itemView.getContext().getString(R.string.sentiment_score, sentiment.getSentimentScore()));
     }
 
     @Override
