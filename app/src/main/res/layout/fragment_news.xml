@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.news.NewsFragment">
-
-    <!-- Swipe to Refresh -->
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Lista de știri -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/news_recycler_view"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Titlul fix -->
+            <TextView
+                android:id="@+id/textNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reddit_market_sentiment"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- RecyclerView for news -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
