@@ -1,7 +1,6 @@
 package marven.smart_market_insight.ui.news;
 
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +19,7 @@ import java.util.List;
 
 import marven.smart_market_insight.GlideApp;
 import marven.smart_market_insight.R;
+import marven.smart_market_insight.util.DateUtils;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
 
@@ -41,7 +41,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         NewsItem newsItem = newsList.get(position);
         holder.title.setText(newsItem.getTitle());
         holder.description.setText(newsItem.getDescription());
-        holder.pubDate.setText(newsItem.getPubDate());
+        String formattedDate = DateUtils.getRelativeTime(newsItem.getPubDate(), holder.itemView.getContext());
+        holder.pubDate.setText(formattedDate);
         holder.source.setText(holder.itemView.getContext().getString(R.string.source) + ": " + newsItem.getSource());
 
         GlideApp.with(holder.itemView.getContext())
@@ -51,16 +52,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
                 .listener(new com.bumptech.glide.request.RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                        // Hide the ImageView if the image loading fails
                         holder.image.setVisibility(View.GONE);
-                        return false; // Allow Glide to handle the error placeholder
+                        return false;
                     }
 
                     @Override
                     public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                        // Show the ImageView if the image loads successfully
                         holder.image.setVisibility(View.VISIBLE);
-                        return false; // Allow Glide to handle the resource
+                        return false;
                     }
                 })
                 .into(holder.image);
@@ -80,7 +79,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         TextView title;
         TextView description;
         TextView pubDate;
-        TextView source; // New TextView for source
+        TextView source;
         ImageView image;
 
         public NewsViewHolder(@NonNull View itemView) {
@@ -88,7 +87,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             title = itemView.findViewById(R.id.news_title);
             description = itemView.findViewById(R.id.news_description);
             pubDate = itemView.findViewById(R.id.news_pub_date);
-            source = itemView.findViewById(R.id.news_source); // Initialize source TextView
+            source = itemView.findViewById(R.id.news_source);
             image = itemView.findViewById(R.id.news_image);
         }
     }

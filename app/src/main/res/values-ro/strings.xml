@@ -32,5 +32,13 @@
     <string name="sentiment_score">Scorul sentimentului: %1$s</string>
     <string name="reddit_market_sentiment">Sentimentul pieței Reddit</string>
     <string name="source">Sursa</string>
-    <string name="news_fragment_text">Acesta este fragmentul de știri</string>
+    <string name="news_fragment_text">Știri de afaceri</string>
+
+    <string name="now">acum</string>
+    <string name="minute_ago">acum 1 minut</string>
+    <string name="minutes_ago">acum %1$d minute</string>
+    <string name="hour_ago">acum 1 oră</string>
+    <string name="hours_ago">acum %1$d ore</string>
+    <string name="day_ago">acum 1 zi</string>
+    <string name="days_ago">acum %1$d zile</string>
 </resources>
