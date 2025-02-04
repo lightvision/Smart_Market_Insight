@@ -98,13 +98,14 @@ public class NewsFragment extends Fragment {
                 String title = item.select("title").text();
                 String description = item.select("description").text();
                 String imageUrl = item.select("media\\:thumbnail").attr("url");
-                String pubDate = item.select("pubDate").text(); // Extract publication date
+                String pubDate = item.select("pubDate").text();
+                String source = "BBC News"; // Set source
 
                 // Log the extracted image URL and publication date
                 Log.d("NewsFragment", "Extracted image URL: " + imageUrl);
                 Log.d("NewsFragment", "Extracted publication date: " + pubDate);
 
-                newsItems.add(new NewsItem(title, description, imageUrl, pubDate));
+                newsItems.add(new NewsItem(title, description, imageUrl, pubDate, source));
             }
         } catch (Exception e) {
             e.printStackTrace();

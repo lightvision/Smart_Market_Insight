@@ -31,4 +31,6 @@
     <string name="number_of_comments">Număr de comentarii: %1$d</string>
     <string name="sentiment_score">Scorul sentimentului: %1$s</string>
     <string name="reddit_market_sentiment">Sentimentul pieței Reddit</string>
+    <string name="source">Sursa</string>
+    <string name="news_fragment_text">Acesta este fragmentul de știri</string>
 </resources>

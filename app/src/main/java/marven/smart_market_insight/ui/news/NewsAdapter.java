@@ -41,7 +41,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         NewsItem newsItem = newsList.get(position);
         holder.title.setText(newsItem.getTitle());
         holder.description.setText(newsItem.getDescription());
-        holder.pubDate.setText(newsItem.getPubDate()); // Bind publication date
+        holder.pubDate.setText(newsItem.getPubDate());
+        holder.source.setText(holder.itemView.getContext().getString(R.string.source) + ": " + newsItem.getSource());
 
         GlideApp.with(holder.itemView.getContext())
                 .load(newsItem.getImageUrl())
@@ -78,14 +79,16 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     public static class NewsViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         TextView description;
-        TextView pubDate; // New TextView for publication date
+        TextView pubDate;
+        TextView source; // New TextView for source
         ImageView image;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.news_title);
             description = itemView.findViewById(R.id.news_description);
-            pubDate = itemView.findViewById(R.id.news_pub_date); // Initialize publication date TextView
+            pubDate = itemView.findViewById(R.id.news_pub_date);
+            source = itemView.findViewById(R.id.news_source); // Initialize source TextView
             image = itemView.findViewById(R.id.news_image);
         }
     }

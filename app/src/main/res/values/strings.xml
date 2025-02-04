@@ -4,6 +4,7 @@
     <string name="app_name">Smart Market Insight</string>
     <string name="title_home">Trends</string>
     <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">News</string>
 
     <!--    Termeni si Conditii-->
     <string name="terms_and_conditions">
@@ -24,11 +25,12 @@
     <string name="accept_terms_checkbox">Accept Terms and Conditions</string>
     <string name="terms_exit_button">Exit</string>
     <string name="terms_ok_button">OK</string>
-    <string name="title_notifications">News</string>
 
     <string name="ticker">Ticker</string>
     <string name="sentiment">Sentiment: %1$s</string>
     <string name="number_of_comments">Number of comments: %1$d</string>
     <string name="sentiment_score">Sentiment score: %1$s</string>
     <string name="reddit_market_sentiment">Reddit Market Sentiment</string>
+    <string name="source">Source</string>
+    <string name="news_fragment_text">This is the news fragment</string>
 </resources>
